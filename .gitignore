@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+voice-to-emoji/node_modules
+voice-to-emoji/.pnp
+voice-to-emoji/.pnp.js
+
+# testing
+voice-to-emoji/coverage
+
+# production
+voice-to-emoji/build
+
+# misc
+voice-to-emoji/.DS_Store
+voice-to-emoji/.env.local
+voice-to-emoji/.env.development.local
+voice-to-emoji/.env.test.local
+voice-to-emoji/.env.production.local
+
+voice-to-emoji/npm-debug.log*
+voice-to-emoji/yarn-debug.log*
+voice-to-emoji/yarn-error.log*
