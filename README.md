@@ -31,11 +31,11 @@ This may sound difficult to do. In many ways using an existing model may be easi
 You can also use Synthetic Data(e.g. 3D models).
 
 ## Popular Machine Learning Tools
-[ChatGPT](https://openai.com/blog/chatgpt/) - A model trained to take in prompts and creates text
-[Teachable Machine](https://teachablemachine.withgoogle.com/) - We can create models here, and import them into our apps. It uses your browser to build it
-[PyTorch](https://pytorch.org/) - A set of libraries made in Python/machine learning framework
-[TensforFlow](https://www.tensorflow.org/js) - A way to develop models in Javascript
-[MediaPipe](https://google.github.io/mediapipe/) - Offers various prebuilt solutions for face/pose/hand detection
+- [ChatGPT](https://openai.com/blog/chatgpt/) - A model trained to take in prompts and creates text 
+- [Teachable Machine](https://teachablemachine.withgoogle.com/) - We can create models here, and import them into our apps. It uses your browser to build it
+- [PyTorch](https://pytorch.org/) - A set of libraries made in Python/machine learning framework
+- [TensforFlow](https://www.tensorflow.org/js) - A way to develop models in Javascript
+- [MediaPipe](https://google.github.io/mediapipe/) - Offers various prebuilt solutions for face/pose/hand detection
 
 
 
