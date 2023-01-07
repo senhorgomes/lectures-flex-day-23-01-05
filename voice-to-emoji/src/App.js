@@ -1,8 +1,11 @@
 import logo from './logo.svg';
+import {useState} from 'react'
 import './App.css';
 import "@tensorflow/tfjs";
 import * as speechCommands from "@tensorflow-models/speech-commands"
 function App() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const labels = ['😶', '👨‍🏫', '🐠','🍕', '🤖'  ]
 
   const URL = "http://localhost:3000/model/";
 
@@ -26,7 +29,6 @@ function App() {
     const listen = async() => {
         const recognizer = await createModel();
         const classLabels = recognizer.wordLabels(); // get class labels
-        const labels = ['😶', '🍦', '🐠', '👨‍🏫', '🍕', '🤖', '✨']
         // const scoreResults = [0.008475306443870068, 0.8869879841804504, 0.009482826106250286, 0.001157911610789597, 0.08170322328805923, 0.008568895980715752, 0.003623789642006159, buffer: ArrayBuffer(28), byteLength: 28, byteOffset: 0, length: 7, Symbol(Symbol.toStringTag): 'Float32Array']
         // listen() takes two arguments:
         // 1. A callback function that is invoked anytime a word is recognized.
@@ -38,7 +40,7 @@ function App() {
             const biggestNumberInArray = Math.max(...scores) //0.8869879841804504
             const indexOfBiggestNumber = scores.indexOf(biggestNumberInArray)// 1
             // labels[indexOfBiggestNumber]
-            console.log(labels[indexOfBiggestNumber])
+            indexOfBiggestNumber !== 0 && setCurrentIndex(indexOfBiggestNumber)
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
             probabilityThreshold: 0.75,
@@ -53,7 +55,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className="App-logo" alt="logo" >{labels[currentIndex]}</h1>
         <h1>
           Voice to Emoji
         </h1>
